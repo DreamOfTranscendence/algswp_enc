@@ -33,3 +33,24 @@ return i4&1?(((b1&15)<<8)+b2):((b1<<4)+(b2>>4)); },
 "s12a4":function set12BitAtIndx4(u8a,i4,n){ var aL=u8a.length,i8=(i4>>1)%aL,Lm=(i8+1)%aL,b;
 if(i4&1){ b=u8a[i8];u8a[i8]=(b&240)+(n>>8);u8a[Lm]=n&255; }else{ u8a[i8]=n>>4;b=u8a[Lm];u8a[Lm]=((n&15)<<4)+(b&15); } }
 });
+
+if(self.document){ //if web browser, set string converters, can probably use new Uint8Array(arraybuffer) for `crypting files
+self.str2u8a=function Str2uint8a(s){
+  var a=new Uint8Array(s.length),j=0,L=s.length;
+  while(j!=L){
+    a[j]=s.charCodeAt(j);
+    j++;
+  };
+  return a;
+};
+  
+self.u8a2str=function Uint8a2str(a){
+ var s="",L=a.length,j=0;
+ while(j!=L){
+   s+=String.fromCharCode(a[j]);
+   j++;
+ };
+ return s;
+};
+}
+//for nodejs, do like:  new Uint8Array(Buffer.from("data string","binary")); and Buffer.from(dataUint8Array).toString("binary");
