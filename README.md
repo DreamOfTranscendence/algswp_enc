@@ -19,13 +19,21 @@ Any potential security it MIGHT provide is based on the idea that it's infeasibl
  Feel free to try to crack the algorithm by randomly generating passwords, encrypting data with and forgetting the passwords, keeping encrypted and unencrypted copies of the data and trying to find the correlations.
 
 
+
 Algswp12 Usage require("./algswp12.js"); or <script src="algswp12.js"></script>
+
 Uint8Array data Ark12( Uint8Array data_to_crypt, String password, Bool runAsDecrypt );
+
 //Ark12 returns the same Uint8Array that was passed to it but all the values of the array have been modified
+
 example: var data=new Uint8Array(64,56,10,20,30,40), key="Password"; Ark12(data,key)&&null; 
+
 //data has been encrypted
+
 Ark12(data,key,true)&&null;
+
 //data has been decrypted
+
 //in this example &&null was added to mute annoying console output of return value in nodejs consoles and similar environments
 
  
