@@ -1,4 +1,6 @@
 
+try{ self; }catch(e){ global.self=global; }; //fix annoying nodejs naming difference
+
 self.Ark12=Object.assign(function a12(dat,key,dc){ //dat must be Uint8Array
  var i,j=0,dL=dat.length,dL2=dL<<1,b,c,P=a12.P,rP=a12.rP,g12a4=a12.g12a4,s12a4=a12.s12a4,d,e,f,g,h,m,n;
 
