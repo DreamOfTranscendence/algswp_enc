@@ -1,5 +1,5 @@
 # algswp_enc
-Algorithm with Swapping Encryption, ( Written in javascript, a series of lightweight symmetric encryption algorithms that work in nodejs and web-browsers )
+Algorithm with Swapping Encryption, ( Written in javascript, lightweight symmetric encryption that works in nodejs and web-browsers )
 
 
    A T T E N T I O N :
